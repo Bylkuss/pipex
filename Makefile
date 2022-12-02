@@ -27,7 +27,7 @@ all: 	$(NAME)
 
 
 $(NAME): $(OBJS)
-	$(MAKE) -C $(LIBFT_PATH)
+	$(MAKE) -C $(LIBFT_PATH) --silent
 	$(CC) $(CFLAGS) $(OBJS) $(LIBFT) -o $(NAME)
 	@echo "\n$(GREEN)$(NAME) created!$(DEFAULT)💯"
 
@@ -37,7 +37,7 @@ $(NAME): $(OBJS)
 
 clean:
 	@$(RM) $(OBJS)
-	make -C $(LIBFT_PATH) clean
+	make -C $(LIBFT_PATH) clean --silent
 	@echo "\n$(YELLOW)object files deleted!$(DEFAULT)💯"
 
 fclean:	clean

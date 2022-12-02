@@ -6,7 +6,7 @@
 /*   By: loadjou <loadjou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 20:42:05 by loadjou           #+#    #+#             */
-/*   Updated: 2022/08/21 11:28:17 by loadjou          ###   ########.fr       */
+/*   Updated: 2022/08/22 11:27:14 by loadjou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ static void	ft_child1(int fds[], char **argv, char **env)
 	close(fds[0]);
 	cmd = get_paths(env, argv[2]);
 	full_cmd = ft_split(argv[2], ' ');
-	if (execve(cmd, full_cmd, env) == -1)
-		error_msg("Error! ExecVe-1\n");
+	execve(cmd, full_cmd, env);
 	free(cmd);
 	freetab(full_cmd);
 	close(fds[1]);
@@ -44,13 +43,7 @@ static void	ft_child2(int file2, int fds[], char **argv, char **env)
 	close(fds[1]);
 	cmd = get_paths(env, argv[3]);
 	full_cmd = ft_split(argv[3], ' ');
-	if (execve(cmd, full_cmd, env) == -1)
-	{
-		free(cmd);
-		freetab(full_cmd);
-		// freetab(full_cmd);
-		error_msg("Error! ExecVe-2\n");
-	}
+	execve(cmd, full_cmd, env);
 	free(cmd);
 	freetab(full_cmd);
 	close(fds[0]);
