@@ -1,4 +1,14 @@
 # <p align="center">pipex </p>
+
+<p align="center">
+    <a href="https://www.cprogramming.com/"><img alt="Made with C" src="https://img.shields.io/badge/Made%20with-C-1f425f.svg"/></a>
+    <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/bylkuss/pipex?color=lightblue" />
+    <img alt="Number of lines of code" src="https://img.shields.io/tokei/lines/github/bylkuss/pipex?color=critical" />
+    <img alt="Code language count" src="https://img.shields.io/github/languages/count/bylkuss/pipex?color=yellow" />
+    <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/bylkuss/pipex?color=blue" />
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/bylkuss/pipex?color=green" />
+</p>
+
 Pipex is a UNIX mechanism that reproduces in C the behaviour of a shell command. It launches as 
 `./pipex infile cmd1 cmd2 outfile` and behaves as this following bash command line does: `$> < file1 cmd1 | cmd2 > file2`
 
